@@ -44,8 +44,13 @@ namespace GrandCircusLab3
                         Console.WriteLine("Even and less than 25.");
                     }
 
-                    Console.WriteLine("Would you like to continue " + name + "? Y/N");
+                    Console.Write("Would you like to continue " + name + "? Y/N: ");
                     goAgain = Console.ReadLine().ToUpper();
+                    while(goAgain != "Y" && goAgain != "N")
+                    {
+                        Console.Write("Invalid input. Would you like to continue " + name + "? Y/N: ");
+                        goAgain = Console.ReadLine().ToUpper();
+                    }
                     
                 }
                 catch (Exception e)
